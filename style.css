@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0; /* Remove default body margins */
+}
+
+#options {
+    margin-top: 40px; /* Adjust spacing for better readability */
+}
+
+button {
+    margin: 10px;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Responsive font size */
+    font-size: 1.2rem;
+}
+
+/* Button colors */
+.btn-red {
+    background-color: #FF5733;
+}
+
+.btn-green {
+    background-color: #33FF57;
+}
+
+.btn-blue {
+    background-color: #5733FF;
+}
+
+#flowers {
+    margin-top: 20px;
+}
+
+.flw {
+    max-width: 50%;
+    height: auto;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    z-index: 2; /* Ensure the flowers are above other elements */
+}
+
+.garden {
+    position: relative;
+    height: 100vh; /* 100% of the viewport height */
+    overflow: hidden;
+}
+
+.tree {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background: #8B4513; /* Brown color for tree trunk */
+    bottom: 0;
+    z-index: 1; /* Place the trees behind the flowers */
+}
+
+.tree::before,
+.tree::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #228B22; /* Green color for tree leaves */
+    border-radius: 50%;
+    bottom: 100px;
+}
+
+.tree::before {
+    left: -50px;
+}
+
+.tree::after {
+    right: -50px;
+}
+
+.flower {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #FF69B4; /* Pink color for flowers */
+    border-radius: 50%;
+    bottom: 100px;
+    z-index: 1; /* Place the flowers behind the content */
+}
+
+.flower::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 30px;
+    background: #32CD32; /* Green color for flower stem */
+    bottom: 20px;
+    left: 7.5px;
+}
+
+/* .flower:nth-child(2) {
+    left: 20%;
+}
+
+.flower:nth-child(3) {
+    left: 40%;
+}
+
+.flower:nth-child(4) {
+    left: 60%;
+}
+
+.flower:nth-child(5) {
+    left: 80%;
+} */
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    #options {
+        text-align: left; /* Adjust button alignment */
+    }
+}
